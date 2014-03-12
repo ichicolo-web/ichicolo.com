@@ -1,0 +1,288 @@
+@charset "utf-8";
+
+.contents {
+  width: 100%!important;
+}
+
+.animations .world {
+	height: 300px!important;
+}
+
+.animations a {
+  right: 10%!important;
+}
+
+.container.top {
+  width: 100%!important;
+}
+
+.container .navi {
+  position: absolute;
+  top: 18%!important;
+  right: 3%;
+}
+
+.container.top .key-visual {
+  top: 65%;
+  left: 50%;
+  margin: -124px 0 0 -124px;
+  position: absolute;
+  overflow:hidden;
+}
+
+.container.top .links.members {
+  top: 30%;
+  left: 48%;
+}
+.container.top .links.works {
+  top: 50%;
+  left: 82%;
+}
+.container.top .links.contact {
+  top: 75%;
+  left: 15%;
+}
+
+.container.top iframe.like-box {
+  width: 95%!important;
+  height: 100%!important;
+  top: 230%;
+  right: 3%;
+  position: absolute;
+}
+
+.container.top canvas {
+  display: none;
+}
+
+.container.top .twitter {
+  font-size: 1.1em;
+  position: absolute;
+  width: 90%;
+  top: 100%;
+  right: 3%;
+}
+
+.container.top .copyright {
+  font-size: 0.7em;
+  position: absolute;
+  top: 410%;
+  right: 3%;
+}
+
+.container .inner .category {
+  top: 22%!important;
+}
+
+.container.members .inner .ishikawa {
+  width: 124px;
+  height: 124px;
+  margin: -62px 0 0;
+  position: absolute;
+  top: -160px;
+  left: 10%;
+}
+
+.container.members .inner .ino {
+  width: 124px;
+  height: 124px;
+  margin: -62px 0 0;
+  position: absolute;
+  top: -160px;
+  right: 10%;
+}
+
+.container.members .inner h2 {
+  width: 45%;
+  font-size: 0.8em;
+  font-weight: bold;
+  color: #ffffff;
+  position: absolute;
+  top: 30%;
+  left: -1000px;
+}
+
+.container.members .inner h2 strong {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+.container.members .inner ul {
+  position: absolute;
+  top: 70%;
+  display: none;
+}
+
+.container.members .inner ul.is.description {
+  text-align: left;
+  left: 10%;
+}
+
+.container.members .inner ul.in.description {
+  text-align: right;
+  right: 10%;
+}
+
+.container.members .inner a.close {
+  top: 83%;
+  left: 50%;
+  margin: 0 0 0 -22px;
+}
+
+.container.works {
+  width: 100%;
+  height: 100%;
+  display: none;
+  background-color: #DDDDDD;
+  position: absolute;
+  top: 0;
+}
+
+.container.works .inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.container.works .inner h1 {
+  width: 260px;
+  height: 42px;
+  position: absolute;
+  top: 3%;
+  left: 3%;
+}
+
+.container.works .inner .navi {
+  position: absolute;
+  top: 5%;
+  right: 3%;
+}
+
+.container.works .inner .slider {
+  width: 190px;
+  height: 190px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -95px 0 0 -95px;
+  overflow: hidden;
+}
+
+.container.works .inner .slider .shots {
+  position: relative;
+  float: left;
+  width: 190px;
+  height: 190px;
+}
+
+.container.works .inner .frame {
+  position: absolute;
+  width: 200px;
+  height: 200px;
+  top: 50%;
+  left: 50%;
+  margin: -100px 0 0 -100px;
+}
+
+.container.works .inner .name {
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #000000;
+  position: absolute;
+  top: 48%;
+  left: 8%;
+}
+
+.container.works .inner ul {
+  font-size: 0.5em;
+  position: absolute;
+  top: 65%;
+  right: 8%;
+  text-align: right;
+}
+
+.container.works .inner a.close {
+  top: 83%;
+  left: 50%;
+  margin: 0 0 0 -22px;
+}
+
+.container.contacts {
+  width: 100%;
+  height: auto;
+  background-color: #fff8b3;
+  position: absolute;
+  top: 0;
+}
+
+.container.contacts .inner {
+  overflow: hidden;
+}
+
+.container.contacts h1 {
+  width: 260px;
+  height: 42px;
+  position: absolute;
+  top: 3%;
+  left: 3%;
+}
+
+.container.contacts .navi {
+  position: absolute;
+  top: 5%;
+  right: 3%;
+}
+
+.container.contacts .navi a {
+  margin: 0 0 0 0.5em;
+}
+
+.container.contacts .form {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -100px 0 0 -100px;
+  background: none;
+  font-size: 0.8em;
+}
+
+.container.contacts .form form {
+  margin: 0;
+}
+
+.container.contacts .inner .category {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #888888;
+  position: absolute;
+  top: 15%;
+  left: 4%;
+}
+
+.container.contacts .inner .form .title {
+  font-size: 1.4em;
+  font-weight: bold;
+  color: #000000;
+  margin: 0 0 0.5em;
+}
+
+.container.contacts .inner .form p {
+  margin: 0.5em 0 0.1em;
+  font-family: "ヒラギノ丸ゴ ProN W4","Hiragino Maru Gothic ProN";
+}
+
+.container.contacts .copyright {
+  font-size: 0.7em;
+  position: absolute;
+  bottom: 2%;
+  right: 3%;
+}
+
+.container.contacts .inner a.close {
+  top: 83%;
+  left: 50%;
+  margin: 0 0 0 -22px;
+}
+
