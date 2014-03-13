@@ -27,6 +27,10 @@ h2.number {
   display: none;
 }
 
+h3 {
+  font-size: 170%;
+}
+
 img {
   max-width: 100%;
 }
@@ -35,8 +39,12 @@ img {
   color: #CC0000;
 }
 
+.jap {
+  font-size: 60%;
+}
+
 .error {
-  font-size:85%;
+  font-size:95%;
   color: red;
 }
 
@@ -254,30 +262,48 @@ nav#side p.active{
 }
 
 form.contact {
-  width: 50%;
-  margin: 0 auto;
+  width: 70%;
+  margin: 50px auto 0;
+  padding: 2% 3%;
+  background-color: rgba(0,255,230,0.4);
+  border-radius: 10px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+}
+
+.contact p:first-child {
+  font-size: 120%;
+  margin: 0 0 15px;
 }
 
 .contact table {
+  width: 100%;
 	border-collapse: collapse;
+}
+
+.contact th {
+  width: 30%;
+  text-align: left;
+}
+
+.contact td {
+  width: 70%;
+  padding: 5px 0;
+}
+
+.contact td input,
+.contact td textarea {
+  width: 95%;
+  font-size: 130%;
 }
 
 .contact td.error input,
 .contact td.error textarea {
-	background-color:#fffacd;
+	background-color: #fffff0;
 }
 
-.contact caption {
-  margin:10px 0;
-  padding:0.5em;
-  background-color:#c9d9f0;
-  color:#3762a8;
-  font-weight:bold;
-}
-
-.contact td {
-  padding:0.5em;
-	text-align:left;
+.contact td textarea {
+  height: 15ex;
 }
 
 /*
