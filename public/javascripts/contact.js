@@ -61,18 +61,18 @@ $(function () {
     $.ajax({
       type: 'GET',
       url: '/contacts/confirm.html',
-      dataType: 'html',
-      success: function (data) {
-        $('#contact').html($(data));
-        $('#name').text(htmlspecialchars(serial[0].value));
-        $('#email').text(htmlspecialchars(serial[1].value));
-        $('#address').text(htmlspecialchars(serial[3].value));
-        $('#content').text(htmlspecialchars(serial[4].value));
-        $('input[name="name"]').val(htmlspecialchars(serial[0].value));
-        $('input[name="email"]').val(htmlspecialchars(serial[1].value));
-        $('input[name="address"]').val(htmlspecialchars(serial[3].value));
-        $('input[name="content"]').val(htmlspecialchars(serial[4].value));
-      }
+      dataType: 'html'
+    }).done(function (data) {
+      $('#contact').html($(data));
+      $('#name').text(htmlspecialchars(serial[0].value));
+      $('#email').text(htmlspecialchars(serial[1].value));
+      $('#address').text(htmlspecialchars(serial[3].value));
+      $('#content').text(htmlspecialchars(serial[4].value));
+      $('input[name="name"]').val(htmlspecialchars(serial[0].value));
+      $('input[name="email"]').val(htmlspecialchars(serial[1].value));
+      $('input[name="address"]').val(htmlspecialchars(serial[3].value));
+      $('input[name="content"]').val(htmlspecialchars(serial[4].value));
+    }).fail(function (data) {
     });
   });
 
@@ -138,18 +138,18 @@ $(function () {
     $.ajax({
       type: 'GET',
       url: '/contacts/confirm.html',
-      dataType: 'html',
-      success: function (data) {
-        $('#contact').html($(data));
-        $('#name').text(htmlspecialchars(serial[0].value));
-        $('#email').text(htmlspecialchars(serial[1].value));
-        $('#address').text(htmlspecialchars(serial[3].value));
-        $('#content').text(htmlspecialchars(serial[4].value));
-        $('input[name="name"]').val(htmlspecialchars(serial[0].value));
-        $('input[name="email"]').val(htmlspecialchars(serial[1].value));
-        $('input[name="address"]').val(htmlspecialchars(serial[3].value));
-        $('input[name="content"]').val(htmlspecialchars(serial[4].value));
-      }
+      dataType: 'html'
+    }).done(function (data) {
+      $('#contact').html($(data));
+      $('#name').text(htmlspecialchars(serial[0].value));
+      $('#email').text(htmlspecialchars(serial[1].value));
+      $('#address').text(htmlspecialchars(serial[3].value));
+      $('#content').text(htmlspecialchars(serial[4].value));
+      $('input[name="name"]').val(htmlspecialchars(serial[0].value));
+      $('input[name="email"]').val(htmlspecialchars(serial[1].value));
+      $('input[name="address"]').val(htmlspecialchars(serial[3].value));
+      $('input[name="content"]').val(htmlspecialchars(serial[4].value));
+    }).fail(function (data) {
     });
   };
 
@@ -163,34 +163,48 @@ $(function () {
     $.ajax({
       type: 'GET',
       url: '/contacts/contact.html',
-      dataType: 'html',
-      success: function (data) {
-        $('#contact').html($(data));
-        $('input[name="name"]').val(name);
-        $('input[name="email"]').val(email);
-        $('input[name="address"]').val(address);
-        $('textarea[name="content"]').text(content);
-      }
+      dataType: 'html'
+    }).done(function (data) {
+      $('#contact').html($(data));
+      $('input[name="name"]').val(name);
+      $('input[name="email"]').val(email);
+      $('input[name="address"]').val(address);
+      $('textarea[name="content"]').text(content);
+    }).fail(function (data) {
     });
   });
 
-  //$(document).on('click', '#send', function () {
-  //  var inputs = $('form.contact :input')
-  //    , serial = inputs.serializeArray()
-  //    ;
+  $(document).on('click', '#send', function () {
+    var inputs = $('form.contact :input')
+      , serial = inputs.serializeArray()
+      ;
 
-  //  $.ajax({
-  //    type: 'POST',
-  //    dataType:'json',
-  //    url: '/contacts/send.php',
-  //    data: {
-  //      name: serial[0].value,
-  //      email: serial[1].value,
-  //      address: serial[2].value,
-  //      content: serial[3].value
-  //    },
-  //    success: function (data) {
-  //    }
-  //  });
-  //});
+    $.ajax({
+      type: 'POST',
+      dataType:'json',
+      url: '/contacts/send.php',
+      data: {
+        name: serial[0].value,
+        email: serial[1].value,
+        address: serial[2].value,
+        content: serial[3].value
+      }
+    }).done(function (data) {
+      $.ajax({
+        type: 'GET',
+        url: '/contacts/success.html',
+        dataType: 'html'
+      }).done(function (data) {
+        $('#contact').html($(data));
+      });
+    }).fail(function (data) {
+      $.ajax({
+        type: 'GET',
+        url: '/contacts/fail.html',
+        dataType: 'html'
+      }).done(function (data) {
+        $('#contact').html($(data));
+      });
+    });
+  });
 });
