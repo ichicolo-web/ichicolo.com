@@ -2,6 +2,7 @@ body {
   font-family: 'Flamenco', cursive;
   font-size: 120%;
   color: #8a8683;
+  margin: 0;
 }
 
 body video:first-child {
@@ -50,6 +51,34 @@ img {
 
 .button {
 	text-align:center;
+}
+
+//.dot {
+//  top: 39px;
+//  left: 8px;
+//  position: fixed;
+//  z-index: 1000;
+//  display: none;
+//}
+//
+//.dot img {
+//  bottom: 0;
+//  position: absolute;
+//  cursor: pointer;
+//}
+
+.earth {
+  bottom: 0;
+  right: 0;
+  position: fixed;
+  z-index: 1001;
+  cursor: pointer;
+}
+
+.earth img {
+  //bottom: 0;
+  //position: absolute;
+  //cursor: pointer;
 }
 
 p {
@@ -190,6 +219,7 @@ nav#side p.active{
   list-style: none;
   margin: 0;
   padding: 0;
+  display: none;
 }
 
 .slide.members .ishikawa .name,

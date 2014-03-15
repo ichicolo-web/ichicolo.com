@@ -2,8 +2,8 @@ $(function () {
   $(window).stellar();
 
   var links = $('nav#side').find('p')
+    , earth = $('.earth').find('img')
     , slide = $('.slide')
-    , button = $('.button')
     , mywindow = $(window)
     , htmlbody = $('html,body')
     ;
@@ -79,7 +79,7 @@ $(function () {
       );
 
       setTimeout(function () {
-        $('.slide.members .ishikawa ul').animate(
+        $('.slide.members .ishikawa ul').fadeIn('fast').animate(
           {
             margin: 0
           },
@@ -91,7 +91,7 @@ $(function () {
       }, 3500);
 
       setTimeout(function () {
-        $('.slide.members .inoue ul').animate(
+        $('.slide.members .inoue ul').fadeIn('fast').animate(
           {
             margin: 0
           },
@@ -116,9 +116,39 @@ $(function () {
     goToByScroll(dataslide);
   });
  
-  //button.click(function (e) {
-  //  e.preventDefault();
-  //  var dataslide = $(this).attr('data-slide');
-  //  goToByScroll(dataslide);
-  //});
+  earth.click(function (e) {
+    e.preventDefault();
+    var dataslide = $(this).attr('data-slide');
+    goToByScroll(dataslide);
+  });
+});
+
+$(function () {
+  var earthanimation = function () {
+    var earth = $('.earth');
+    
+    earth.animate(
+      {
+        bottom: '20px'
+      },
+      {
+        duration: 1500,
+        easing: 'easeInOutQuad',
+        complete: function () {
+          earth.animate(
+            {
+              bottom: '0'
+            },
+            {
+              duration: 1500,
+              easing: 'easeInOutQuad',
+            }
+          );
+          earthanimation();
+        }
+      }
+    );
+  };
+
+  earthanimation();
 });
