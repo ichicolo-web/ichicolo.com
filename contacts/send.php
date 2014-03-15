@@ -13,7 +13,7 @@ $header = "MIME-Version: 1.0\r\n"
 $name = 'Name : ' . $post->name;
 $email = 'E-mail : ' . $post->email;
 $address = 'Address : ' . @$post->address;
-$content = 'Content : ' . "\n" . preg_replace( '/<br \/>/', '', '/<br \/>/' . $post->content) . "\n";
+$content = 'Content : ' . "\n" . preg_replace( '/<br \/>/', '', $post->content) . "\n";
 $bodyTextData = implode("\n\n", array($name, $email, @$address, $content));
 
 mb_language('uni');

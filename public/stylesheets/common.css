@@ -72,6 +72,11 @@ a:visited {
   text-decoration: none;
 }
 
+input[type="submit"],
+button {
+  cursor: pointer;
+}
+
 .container{
   width: 90%;
   margin: 0 auto;
@@ -261,9 +266,10 @@ nav#side p.active{
   color:#ffffff;
 }
 
-form.contact {
+form.contact,
+div.contact {
   width: 70%;
-  margin: 50px auto 0;
+  margin: 50px auto 200px;
   padding: 2% 3%;
   background-color: rgba(0,255,230,0.4);
   border-radius: 10px;
@@ -304,6 +310,41 @@ form.contact {
 
 .contact td textarea {
   height: 15ex;
+}
+
+.contact .success {
+  font-size: 220%;
+  text-align: center;
+}
+
+.contact button {
+  width: 120px;
+  height: 120px;
+  border: 0;
+  margin: 0 5%;
+  font-size: 120%;
+  font-family: 'Flamenco', cursive;
+  outline:none;
+  color: #fff;
+}
+
+.contact button:hover {
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+  -ms-filter: "alpha(opacity=90)";
+  -moz-opacity: 0.9;
+  -khtml-opacity: 0.9;
+}
+
+.contact button[type="reset"],
+.contact button#return {
+  background: url('/public/images/contacts/reset.png') 0 0 no-repeat;
+}
+
+.contact button#submit,
+.contact button#send {
+  color: #333;
+  background: url('/public/images/contacts/submit.png') 0 0 no-repeat;
 }
 
 /*
