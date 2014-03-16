@@ -6,7 +6,10 @@ $(function () {
     , slide = $('.slide')
     , mywindow = $(window)
     , htmlbody = $('html,body')
+    , work = $('.slide.works section')
     ;
+
+  work.fadeOut();
 
   slide.waypoint(function (event, direction) {
     var dataslide = $(this).attr('data-slide');
@@ -101,6 +104,25 @@ $(function () {
           }
         );
       }, 3500);
+    }
+
+    if (mywindow.scrollTop() > 1700) {
+      work.eq(0).fadeIn('slow');
+    }
+    if (mywindow.scrollTop() > 2300) {
+      work.eq(1).fadeIn('slow');
+    }
+    if (mywindow.scrollTop() > 2900) {
+      work.eq(2).fadeIn('slow');
+    }
+    if (mywindow.scrollTop() > 3500) {
+      work.eq(3).fadeIn('slow');
+    }
+    if (mywindow.scrollTop() > 4100) {
+      work.eq(4).fadeIn('slow');
+    }
+    if (mywindow.scrollTop() > 4700) {
+      work.eq(5).fadeIn('slow');
     }
   });
 
