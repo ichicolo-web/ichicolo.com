@@ -171,6 +171,11 @@ nav#side p.active{
 /*
  ** slide members
  */
+.slide.members {
+  min-height: 1000px;
+  height: auto;
+}
+
 .slide.members h3 {
   width: 80%;
   margin: 30px 10% 30px -1000px;
@@ -224,6 +229,27 @@ nav#side p.active{
 
 .slide.members li {
   line-height: 1.2;
+}
+
+.slide.members .tweets {
+  font-size: 80%!important;
+  padding: 20px 0 0!important;
+}
+
+.slide.members .tweets .user {
+  font-size: 120%;
+}
+
+.slide.members .tweets .user a {
+  text-decoration: none;
+}
+
+.slide.members .tweets .user img {
+  background-color: #fff;
+}
+
+.slide.members .tweets .tweet {
+  font-size: 90%;
 }
 
 

@@ -1,3 +1,13 @@
+<?php
+require_once (dirname(__FILE__) . '/apprications/Twitter.php');
+
+$twitter_ishikawa = new Twitter();
+$twitter_ishikawa->name('3', '@ishikawa67');
+
+$twitter_inoue = new Twitter();
+$twitter_inoue->name('3', '@kobitoino');
+?>
+
 <!DOCTYPE HTML>
 <!--[if lt IE 7]><html class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
 <!--[if IE 7]><html class="no-js lt-ie9 lt-ie8"><![endif]-->
@@ -39,11 +49,7 @@
     <p data-slide="4">topics</p>
     <p data-slide="5">contacts</p>
   </nav>
-<!--  
-  <div class="dot">
-    <img data-slide="1" width="34" height="32" src="/public/images/dot.png" alt="ichicolo">
-  </div>
--->
+
   <div class="earth">
     <img data-slide="1" width="248" height="248" src="/public/images/members.png" alt="ichicolo">
   </div>
@@ -75,6 +81,19 @@
          <li>programming</li>
          <li><a href="http://ishikawa.ichicolo.com" target="_blank">ishikawa.ichicolo.com</a></li>
        </ul>
+
+       <? foreach ($twitter_ishikawa->result as $result): ?>
+       <ul class="tweets">
+         <li class="user clearfix">
+           <a href="https://twitter.com/<?= $result->user->screen_name ?>" target="_blank">
+             <img src="<?= $result->user->profile_image_url ?>" title="<?= $result->user->name ?>" alt="<?= $result->user->name ?>">
+           </a>
+           <span><?= $result->user->name ?></span>
+         </li>
+         <li class="tweet"><?= preg_replace('/(https?|ftp)(:\/\/[-_.!~*\'()a-zA-Z0-9;\/?:\@&=+\$,%#]+)/', '<A class="underline" href="\\1\\2" target="_blank">\\1\\2</A>', $result->text) ?></li>
+         <li class="created_at"><?= date('Y-m-d H:i:s', strtotime($result->created_at)) ?></li>
+       </ul>
+       <? endforeach; ?>
      </div><!--
 
   --><div class="panel inoue">
@@ -85,6 +104,19 @@
          <li>designing</li>
          <li><a href="http://inoue.ichicolo.com" target="_blank">inoue.ichicolo.com</a></li>
        </ul>
+
+       <? foreach ($twitter_inoue->result as $result): ?>
+       <ul class="tweets">
+         <li class="user clearfix">
+           <span><?= $result->user->name ?></span>
+           <a href="https://twitter.com/<?= $result->user->screen_name ?>" target="_blank">
+             <img src="<?= $result->user->profile_image_url ?>" title="<?= $result->user->name ?>" alt="<?= $result->user->name ?>">
+           </a>
+         </li>
+         <li class="tweet"><?= preg_replace('/(https?|ftp)(:\/\/[-_.!~*\'()a-zA-Z0-9;\/?:\@&=+\$,%#]+)/', '<A class="underline" href="\\1\\2" target="_blank">\\1\\2</A>', $result->text) ?></li>
+         <li class="created_at"><?= date('Y-m-d H:i:s', strtotime($result->created_at)) ?></li>
+       </ul>
+       <? endforeach; ?>
      </div>
    </div>
   </article>
