@@ -61,7 +61,7 @@ $(function () {
         );
       }, 1800);
 
-      $('.slide.members .ishikawa').fadeIn('fast').animate(
+      $('.slide.members .ishikawa').fadeIn('fast').css('display', 'inline-block').animate(
         {
           marginTop: '0'
         },
@@ -71,7 +71,7 @@ $(function () {
         }
       );
 
-      $('.slide.members .inoue').fadeIn('fast').animate(
+      $('.slide.members .inoue').fadeIn('fast').css('display', 'inline-block').animate(
         {
           marginTop: '0'
         },
@@ -108,18 +108,63 @@ $(function () {
 
     if (mywindow.scrollTop() > 1700) {
       work.eq(0).children().fadeIn('slow');
+      work.eq(0).find('.photo').find('img').show().animate(
+        {
+          margin: 0
+        },
+        {
+          duration: 700,
+          easing: 'easeInOutQuad',
+        }
+      );
     }
     if (mywindow.scrollTop() > 2300) {
       work.eq(1).children().fadeIn('slow');
+      work.eq(1).find('.photo').find('img').show().animate(
+        {
+          margin: 0
+        },
+        {
+          duration: 700,
+          easing: 'easeInOutQuad',
+        }
+      );
     }
     if (mywindow.scrollTop() > 2900) {
       work.eq(2).children().fadeIn('slow');
+      work.eq(2).find('.photo').find('img').show().animate(
+        {
+          margin: 0
+        },
+        {
+          duration: 700,
+          easing: 'easeInOutQuad',
+        }
+      );
     }
     if (mywindow.scrollTop() > 3500) {
       work.eq(3).children().fadeIn('slow');
+      work.eq(3).find('.photo').find('img').show().animate(
+        {
+          margin: 0
+        },
+        {
+          duration: 700,
+          easing: 'easeInOutQuad',
+        }
+      );
     }
     if (mywindow.scrollTop() > 4100) {
       work.eq(4).children().fadeIn('slow');
+      work.eq(4).find('.photo').find('img').show().animate(
+        {
+          margin: 0
+        },
+        {
+          duration: 700,
+          easing: 'easeInOutQuad',
+        }
+      );
     }
     if (mywindow.scrollTop() > 4700) {
       work.eq(5).children().fadeIn('slow');

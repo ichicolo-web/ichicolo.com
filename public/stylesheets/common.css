@@ -187,12 +187,14 @@ nav#side p.active{
 }
 
 .slide.members .ishikawa {
+  display: none;
   width: 25%;
   margin: -1500px 0 0;
   padding: 0 5% 0 20%;
 }
 
 .slide.members .inoue {
+  display: none;
   width: 25%;
   margin: -1500px 0 0;
   padding: 0 20% 0 5%;
@@ -249,25 +251,35 @@ nav#side p.active{
   margin: 0 0 10ex;
 }
 
-.slide.works .aoyama .photo img:first-child {
-  background: url("/public/images/works/aoyama.jpg") 0 0 no-repeat;
-  background-size: cover;
-}
 .slide.works .unripe .photo img:first-child {
   background: url("/public/images/works/unripe.jpg") 0 0 no-repeat;
   background-size: cover;
+  margin: 0 0 0 -2000px;
+  display: none;
+}
+.slide.works .aoyama .photo img:first-child {
+  background: url("/public/images/works/aoyama.jpg") 0 0 no-repeat;
+  background-size: cover;
+  margin: 0 -2000px 0 0;
+  display: none;
 }
 .slide.works .precom .photo img:first-child {
   background: url("/public/images/works/precom.jpg") 0 0 no-repeat;
   background-size: cover;
+  margin: 0 0 0 -2000px;
+  display: none;
 }
 .slide.works .cust .photo img:first-child {
   background: url("/public/images/works/cust.jpg") 0 0 no-repeat;
   background-size: cover;
+  margin: 0 -2000px 0 0;
+  display: none;
 }
 .slide.works .mew .photo img:first-child {
   background: url("/public/images/works/mew.jpg") 0 0 no-repeat;
   background-size: cover;
+  margin: 0 0 0 -2000px;
+  display: none;
 }
 
 .slide.works .description {
