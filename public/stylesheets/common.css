@@ -245,6 +245,7 @@ nav#side p.active{
 }
 
 .slide.works section {
+  height: 500px;
   margin: 0 0 10ex;
 }
 
