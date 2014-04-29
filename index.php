@@ -125,7 +125,7 @@ $twitter_inoue->name('3', '@kobitoino');
     <div class="container clearfix">
       <h2 class="title">works</h2>
       <h2 class="number"></h2>
-      <h3>Please check out works!</h3>
+      <h3>Please check out our works!</h3>
 
       <!-- unripe -->
       <section class="unripe">
@@ -223,7 +223,7 @@ $twitter_inoue->name('3', '@kobitoino');
       <h2 class="number"></h2>
       <h3>Please check our activities!</h3>
 
-      <iframe id="facebook" src="//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fichicolo&amp;width=400&amp;height=558&amp;show_faces=true&amp;colorscheme=light&amp;stream=true&amp;header=false&amp;appId=252224458181036" scrolling="no" frameborder="0" style="border:none; overflow:hidden; width:400px; height:558px;" allowTransparency="true"></iframe>
+      <iframe id="facebook" src="//www.facebook.com/plugins/likebox.php?href=http%3A%2F%2Fwww.facebook.com%2Fichicolo&amp;width=400&amp;height=558&amp;show_faces=true&amp;colorscheme=light&amp;stream=true&amp;header=false&amp;appId=252224458181036" scrolling="no" frameborder="0" style="border:none; overflow:hidden; height:558px;" allowTransparency="true"></iframe>
     </div>
   </article>
 

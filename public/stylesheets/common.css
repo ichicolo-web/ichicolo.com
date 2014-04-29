@@ -462,3 +462,120 @@ div.contact {
     bottom: -90%;
   }
 }
+
+/*
+ ** max-width: 641px
+ */
+@media screen and (max-width: 641px) {
+video source {
+  display: none;
+}
+
+.earth img {
+  width: 128px;
+  height: 128px;
+}
+
+h2 {
+  font-size: 350%;
+}
+
+.slide.top {
+  height: 35ex;
+}
+
+.slide.top h1 {
+  margin: 0;
+}
+
+.slide.top h2 {
+  color: #333333;
+  margin: 0;
+}
+
+.slide.members {
+  min-height: 1000px;
+  height: auto;
+}
+
+.slide.members h3 {
+  width: 80%;
+  margin: 30px 10% 30px -1000px;
+  text-align: center;
+}
+
+.slide.members ul li {
+  word-wrap: break-word;
+}
+
+.slide.members .ishikawa {
+  display: none;
+  width: 45%;
+  margin: -1500px 0 0;
+  padding: 0 5% 0 0;
+}
+
+.slide.members .inoue {
+  display: none;
+  width: 45%;
+  margin: -1500px 0 0;
+  padding: 0 0 0 5%;
+  text-align: right;
+}
+
+.slide.members .tweets {
+  font-size: 60%!important;
+  padding: 20px 0 0!important;
+}
+
+.slide.members .tweets .user {
+  font-size: 120%;
+}
+
+.slide.members .tweets .tweet {
+  font-size: 70%;
+}
+
+.slide.works section {
+  height: auto;
+  margin: 0 0 10ex;
+}
+
+.slide.works .name {
+  width: 100%;
+  font-size: 150%;
+  vertical-align: middle;
+  display: block;
+}
+
+.slide.works .photo {
+  width: 100%;
+  text-align: center;
+  vertical-align: middle;
+  display: block;
+}
+
+.slide.works .description {
+  width: 100%;
+  display: block;
+}
+
+.slide.topics iframe {
+  width: 250px!important;
+}
+
+.slide.contacts h2,
+.slide.contacts h3 {
+  color:#333333;
+}
+
+form.contact,
+div.contact {
+  width: 90%;
+}
+
+.contact td input {
+  width: 85%;
+}
+
+}
